@@ -7,28 +7,36 @@ from datetime import datetime, timedelta, date, timezone
 import time
 from threading import Thread
 import tzlocal
+import os
+import configparser
 
 app = Flask(__name__, template_folder=".")
 
 # get the local timezone
 local_tz = tzlocal.get_localzone()
 
-# Variables to be changed =========================================================================================================================================================
+# config variables to seperate changeable variables from code ==================================
+config = configparser.ConfigParser()
+config_file_path = os.path.join(os.path.dirname(__file__), '..', 'config.ini')
 
-# Shelly relay variables
-SERVER_URI = "Put your shelly's uri here, it'll likely look like: shelly-x-eu.shelly.cloud"
-DEVICE_ID = "Put your shelly relay's id here"
-AUTH_KEY = "Place your auth key for your account here"
+try:
+    config.read(config_file_path)
+except Exception as e:
+    print(f"Error reading config.ini file: {e}")
+    exit(1)
 
-# Agile Octopus API variables
-region_code = "B" # this is the region code for east midlands (e.g. Lincolnshire), see the readme for a table of the UK's region codes
-product_code = "AGILE-24-10-01" # Agile Octopus tariff code, 
-electricity_tariff_type = "E-1R"
-period_size = 1  # how long the appliance should be switched on for per day, each period is 30 minutes (2 periods would therefore be 1 hour of on-time, 23 hrs off-time)
 
-INTERVAL = 2  # determines how quickly the script loops, this variable can be increased to decrease load on your Raspberry Pi if it's having trouble.
+DEVICE_ID = config.get('Shelly_Variables', 'DEVICE_ID')
+SERVER_URI = config.get('Shelly_Variables', 'SERVER_URI')
+AUTH_KEY = config.get('Shelly_Variables', 'AUTH_KEY')
 
-# End of variables to be changed  ================================================================================================================================================
+region_code = config.get('Tariff_Details', 'region_code')
+product_code = config.get('Tariff_Details', 'product_code')
+electricity_tariff_type = config.get('Tariff_Details', 'electricity_tariff_type')
+period_size = config.getint('Tariff_Details', 'period_size')
+
+INTERVAL = config.getint('Timing_Variables', 'INTERVAL')
+# config variables end ========================================================================
 
 automatic_mode = True
 start_time_global = None
