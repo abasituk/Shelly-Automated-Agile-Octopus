@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Prices Webpage</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <!-- Make the buttons show up, the buttons for the relay will also appear greyed out and unclickable if automatic mode is on -->
+
+<!-- css for all the buttons and text --> 
+<!-- note: currently the webpage only has lightmode, but browser addons should provide dark mode until it's implemented -->
+    <style>
+
+        body 
+        {
+            background-color: white; 
+        }
+
+        .button-container
+        {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        button
+        {
+            font-size: 30px;
+            padding: 20px 30px;
+        }
+
+        button[disabled] 
+        {
+            background-color: grey;
+            color: black;
+            cursor: not-allowed;
+        }
+
+        #status-container
+        {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+
+    </style>
+
+    <script> // retrieve and format all the info from the Control.py to be displayed on the webpage
+        function retrieve_all_info()
+        {
+            fetch('/status')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("optimal-period").innerText = "Optimal Period: " + data.optimalPeriod;
+                    document.getElementById("currently-optimal").innerText = "Currently Optimal Period: " + data.currentlyOptimal;
+                    document.getElementById("auto-mode-status").innerText = "Automatic Mode is " + data.autoModeStatus;
+                    document.getElementById("relay-status").innerText = "Relay is " + data.relayStatus;
+
+                    // Disable manual relay buttons if automatic mode is enabled.
+                    var autoMode = data.autoModeStatus === "ON";
+                    document.getElementById("turn-on-button").disabled = autoMode;
+                    document.getElementById("turn-off-button").disabled = autoMode;
+                });
+        }
+
+        setInterval(retrieve_all_info, {{ interval }} * 1000);
+        window.onload = retrieve_all_info;
+    </script>
+
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Octopus Agile Energy Prices for The East Midlands</h1>
+    <div id="graph"></div>
+
+<!-- name the buttons and make them change the relay / toggle automode -->
+    <div class="button-container">
+
+        <form method="POST" action="/switch_relay">
+            <input type="hidden" name="turnState" value="on">
+            <button id="turn-on-button" type="submit">Turn On Relay</button>
+        </form>
+
+        <form method="POST" action="/switch_relay">
+            <input type="hidden" name="turnState" value="off">
+            <button id="turn-off-button" type="submit">Turn Off Relay</button>
+        </form>
+
+        <form method="POST" action="/toggle_auto_mode">
+            <button type="submit">Toggle Automatic Mode</button>
+        </form>
+    </div>
+    
+<!-- Format the text that comes before the information variables -->
+    <div id="status-container">
+        <p id="optimal-period">Optimal Period: ...</p>
+        <p id="currently-optimal">Currently Optimal Period: ...</p>
+        <p id="auto-mode-status">Automatic Mode is ...</p>
+        <p id="relay-status">Relay is ...</p>
+    </div>
+
+<!-- lets the graph data be used for the webpage then plots it -->
+    <script>
+        var graph = {{ graph_json | safe }};
+        Plotly.newPlot('graph', graph.data, graph.layout);
+    </script>
+
+</body>
+
+</html>
