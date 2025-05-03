@@ -1,0 +1,15 @@
+[Unit]
+Description=Run ShellyControl on boot
+After=network.target
+Requires=webgraph.service
+
+[Service]
+ExecStart=/bin/bash -c 'source /home/pi/shelly/bin/activate && python /home/pi/shelly/scripts/shellycontrol.py'
+WorkingDirectory=/home/pi/shelly
+User=pi
+Group=pi
+Restart=always
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
