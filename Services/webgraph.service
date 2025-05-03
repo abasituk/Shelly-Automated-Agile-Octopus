@@ -1,0 +1,15 @@
+[Unit]
+Description=Run Webgraph on boot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/bin/bash -c 'source /home/pi/shelly/bin/activate && python /home/pi/shelly/scripts/webgraph.py'
+WorkingDirectory=/home/pi/shelly
+User=pi
+Group=pi
+Restart=always
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
