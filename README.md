@@ -9,7 +9,7 @@ An open-source system of scripts that can be used to automate a Shelly relay to 
 - Uses an interface which runs on the local network to display Agile Octopus' half-hourly prices and control the system.
 
 ## Hardware List
-
+- 
 
 
 
