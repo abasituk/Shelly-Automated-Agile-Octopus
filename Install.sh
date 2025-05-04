@@ -117,7 +117,19 @@ echo "     nano config.ini"
 echo "   You will need your device ID, server URI and Authorization token."
 echo ""
 
-echo "3) After adding your details to the config.ini you can reload -"
+
+echo "3) If you would like to use a screen for your Pi, you may have to enable i2c to connect to it"
+echo "   please note these steps or see https://github.com/abasituk/Shelly-Automated-Agile-Octopus for a visual guide:"
+echo "   run the command:"
+echo "     sudo raspi-config"
+echo "   Select '3 Interface Options'"
+echo "   Select the option saying 'I2C'"
+echo "   Select Yes to enable I2C"
+echo "   Once it's enabled, finally use your right arrow to select 'Finish'"
+echo ""
+
+
+echo "4) After adding your details to the config.ini and enabling I2C, you can reload -"
 echo "   your services so the system will start upon booting your Pi using:"
 echo "     sudo systemctl restart shellycontrol.service webgraph.service"
 echo ""
