@@ -9,7 +9,29 @@ An open-source system of scripts that can be used to automate a Shelly relay to 
 - Uses an interface which runs on the local network to display Agile Octopus' half-hourly prices and control the system.
 
 ## Hardware List
-- 
+
+
+|Devices|Source|
+---------|------
+|Raspberry Pi 4b| https://thepihut.com/products/raspberry-pi-4-model-b?src=raspberrypi&variant=20064052674622|
+|Shelly 1pm| https://shellystore.co.uk/product/shelly-1pm-gen3/|
+|GME12864-43 30pins Display| https://www.alibaba.com/product-detail/New-Design-GME12864-43-30pins-Yellow_1600294817612.html|
+
+
+|Power/Connectors|Source|
+-----|-----
+|C14 Panel Mount IEC Connector Male|https://uk.rs-online.com/web/p/iec-connectors/0488191?gb=s|
+|IEC C13 Socket to Type G UK Plug Power Cord|https://uk.rs-online.com/web/p/power-cords/2621126?gb=s|
+|14 AWG or 2.5mm<sup>2</sup> Wire|https://www.amazon.co.uk/dp/B0CZRGZTLZ?ref=ppx_yo2ov_dt_b_fed_asin_title|
+|Jumper Wires|https://www.amazon.co.uk/dp/B074P726ZR?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_1|
+
+
+
+
+
+*Note: The exact hardware used for the system was listed, but other devices can be used. For example, the Raspberry Pi 4b can be substituted for the cheaper Pi Zero 2W variant. For now, .stl models to house the system are available for the listed parts.*
+
+
 
 
 
