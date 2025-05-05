@@ -33,5 +33,5 @@ If you would like to house the Shelly relay in its own enclosure instead of conn
 
 If an automated smartplug is more desirable, substituting the Shelly relay for a [Shelly smartplug](https://shellystore.co.uk/product/shelly-plus-plug-uk/) may be more straightforward and cost-effective, but the WiFi capable model appears to have been out of stock for atleast a few months. Due to this, it has not yet been tested whether it could work with the current code provided.
 
-*Note: The exact hardware used for the system were listed, but some alternative devices can be used. For example, the Raspberry Pi 4b can be substituted for the cheaper, more compact Pi Zero 2W variant. One thing to consider, is that at the moment, the .stl models to house the system are only available for the listed parts.*
+*Note: The exact hardware used for the system were listed, but some alternative devices can be used. For example, the Raspberry Pi 4b can be substituted for the cheaper, more compact Pi Zero 2W variant. One thing to consider though, is that at the moment, the .stl models to house the system are only available for the listed parts.*
 
