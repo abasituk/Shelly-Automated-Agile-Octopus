@@ -190,6 +190,7 @@ INTERVAL = 2                             # Determines how quickly the webgraph u
 5d. Once the details have been added, press `Ctrl+X`, then `Y`, then `Enter` to save and exit the config.ini file.
 
 <br/>
+
 6. Reload Systemd
 ```
 sudo systemctl daemon-reload
