@@ -114,12 +114,103 @@ GND|9|GND
 
 6. Type in your Pi's username and password
 
-![image](https://github.com/user-attachments/assets/50ad737e-7622-48f6-b773-0e86037af008)
-
 
 ## System Installation
 
-*Here you can use an installation script to easily download the scripts, services and requirements used by the system and set them up for you.*
+*Here you can type these commands into your terminal to easily setup the system*
 
-1. Download install.sh <br/>
+1. Download install.sh
+```
+wget https://raw.githubusercontent.com/abasituk/Shelly-Automated-Agile-Octopus/main/Install.sh
+```
+
+2. Give it permission to run
+```
+chmod +x Install.sh
+```
+
+3. Run it with sudo, the script will download the scripts, services and requirements
+```
+sudo ./Install.sh
+```
+
+<br/>
+4. After the installation is finished, enable your I2c Interface by first opening your config
+
+  4a. Open your Pi's config
+```
+sudo raspi-config
+```
+
+4b. Open 'Interface Options'
+
+![image](https://github.com/user-attachments/assets/d0306fa2-bd10-4aa8-91ff-fabdbdd94460)
+
+4c. Open 'I2C'
+
+![image](https://github.com/user-attachments/assets/233ba3a7-eef2-45eb-bcdd-09ff6982c3b1)
+
+4d. Enable the I2C interface
+
+![image](https://github.com/user-attachments/assets/adf2fdbe-d6f4-4a4d-8eb6-d6021f85b050)
+
+4e. Use your right arrow key to select <Finish> and press enter
+
+![image](https://github.com/user-attachments/assets/3651227b-5b3e-4ff8-ae08-23c5ad4e5c2c)
+
+<br/>
+5. Add your Shelly and tariff details to the system's config.ini file
+5a. Navigate to where the system was installed
+```
+cd /home/pi/shelly
+```
+
+5b. Open config.ini
+```
+nano config.ini
+```
+
+5c. Add your Shelly and tariff details to the config.ini file without the comments:
+```
+[Shelly_Variables]                         # Available at https://control.shelly.cloud/
+DEVICE_ID = X                                  # device settings -> Device information
+SERVER_URI = https://shelly-X-eu.shelly.cloud  # account settings -> Authorization cloud key
+AUTH_KEY = X                                   # account settings -> Authorization cloud key
+
+[Tariff_Details]                       # Details for your agile octopus tariff (to interact with the API)
+region_code = B                          # Region code for east midlands (e.g. Lincolnshire)
+product_code = AGILE-24-10-01            # Your agile octopus tariff's product code
+electricity_tariff_type = E-1R           # As Agile Octopus prices change based on wholesale prices, this probably won't need changing
+period_size = 1                          # How long you would like your appliance to be switched on (1 period = 0.5 hours)
+
+[Timing_Variables]                     # How quickly the code will loop
+INTERVAL = 2                             # Determines how quickly the webgraph updates, increase the value if your Pi is struggling
+```
+
+5d. Once the details have been added, press `Ctrl+X`, then `Y`, then `Enter` to save and exit the config.ini file.
+
+6. Reload Systemd
+```
+sudo systemctl daemon-reload
+```
+
+7. Restart your services
+```
+sudo systemctl restart shellycontrol.service webgraph.service
+```
+
+After these steps, you should be able to type `http://'Your Pi's IP Address':8080` into a browser on the same WiFi network and see your Pi's webgraph.
+
+You can also check the status of the services to see if there are any errors (press `Ctrl+C` to exit the status):
+```
+systemctl status shellycontrol.service
+```
+and
+```
+systemctl status webgraph.service
+```
+
+
+
+
 
