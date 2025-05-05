@@ -135,6 +135,7 @@ sudo ./Install.sh
 ```
 
 <br/>
+
 4. After the installation is finished, enable your I2c Interface by first opening your config
 
   4a. Open your Pi's config
