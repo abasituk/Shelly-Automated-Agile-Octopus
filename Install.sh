@@ -125,7 +125,7 @@ echo "     sudo raspi-config"
 echo "   Select '3 Interface Options'"
 echo "   Select the option saying 'I2C'"
 echo "   Select Yes to enable I2C"
-echo "   Once it's enabled, finally use your right arrow to select 'Finish'"
+echo "   Once it's enabled, use your right arrow key to select 'Finish'"
 echo ""
 
 
