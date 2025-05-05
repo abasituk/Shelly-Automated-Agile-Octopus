@@ -136,5 +136,5 @@ echo ""
 
 echo ""
 echo "Your Shelly details are available at https://control.shelly.cloud/"
-echo "For a visual guide on finding your Shelly details, please see https://github.com/abasituk/Shelly-Automated-Agile-Octopus"
+echo "For a more detailed guide, please see https://github.com/abasituk/Shelly-Automated-Agile-Octopus"
 echo ""
