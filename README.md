@@ -12,9 +12,9 @@ An open-source system of scripts that can be used to automate a Shelly relay to 
 
 |Devices|Source|
 ---------|------
-|Raspberry Pi 4b| https://thepihut.com/products/raspberry-pi-4-model-b?src=raspberrypi&variant=20064052674622|
-|Shelly 1pm| https://shellystore.co.uk/product/shelly-1pm-gen3/|
-|GME12864-43 30pins Display| https://www.alibaba.com/product-detail/New-Design-GME12864-43-30pins-Yellow_1600294817612.html|
+|Raspberry Pi 4b| [ThePiHut](https://thepihut.com/products/raspberry-pi-4-model-b?src=raspberrypi&variant=20064052674622)|
+|Shelly 1pm| [ShellyStore](https://shellystore.co.uk/product/shelly-1pm-gen3/)|
+|GME12864-43 30pins Display| [ThePiHut](https://thepihut.com/products/0-96-oled-display-module-128x64)|
 
 |Power/Connectors|Source|
 -----|-----
