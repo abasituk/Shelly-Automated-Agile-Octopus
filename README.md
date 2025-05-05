@@ -23,7 +23,7 @@ An open-source system of scripts that can be used to automate a Shelly relay to 
 |Jumper Wires|[Amazon](https://www.amazon.co.uk/dp/B074P726ZR?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_1)|
 
 
-If you would like to house the Shelly relay in its own enclosure instead of connecting it to a pre-installed electrical socket, here's some hardware that can essentially be used to create a home-made smartplug with it
+If you would like to house the Shelly relay in its own enclosure instead of connecting it to a pre-installed electrical socket, here's some hardware that can essentially be used to create a smartplug with it
 
 |Power/Connectors for the Relay Enclosure|Source|
 ----|-----
