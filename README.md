@@ -32,7 +32,7 @@ Count|Power/Connectors for the Relay Enclosure|Source|
 1|C14 Panel Mount IEC Connector Male|[RS-Electronics](https://uk.rs-online.com/web/p/iec-connectors/0488191?gb=s)|
 1|IEC C13 Socket to Type G UK Plug Power Cord|[RS-Electronics](https://uk.rs-online.com/web/p/power-cords/2621126?gb=s)|
 1|UK Switched Electrical Socket|[Amazon](https://www.amazon.co.uk/dp/B01L4P5LVC?ref=ppx_yo2ov_dt_b_fed_asin_title)|
-4|M3 x 8 length Bolts|
+6|M3 x 8 length Bolts|
 6|M3 Nuts|
 2|M4 Screws|
 2|M4 Nuts|
