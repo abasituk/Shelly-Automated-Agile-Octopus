@@ -52,7 +52,14 @@ This section describes how to build two subsystems:
 
 ## Control Subsystem Build Guide
 
-The display can be connected to the Raspberry Pi with jumper wires according to the schematic
-![image](https://github.com/user-attachments/assets/d0292c35-3625-4f94-b28f-73a349830ea5)
+The display can be connected to the Raspberry Pi with jumper wires according to the schematic:
 
+|Display|Raspberry Pi Pin|Raspberry Pi Pin Name|
+|-|-|-|
+SDA|3|GPIO2
+SCL|5|GPIO3
+VCC|1|3V3
+GND|9|GND
+
+![Controller Circuit](https://github.com/user-attachments/assets/1dc16f84-1673-4b1d-b6df-e4ffe167df4c)
 
