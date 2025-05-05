@@ -1,7 +1,7 @@
 Currently WIP and will be completed soon.
 
 # Shelly-Automated-Agile-Octopus
-An open-source system of scripts that can be used to automate a Shelly relay to switch on during the cheapest period of your Agile Octopus tariff.
+An open source system of scripts that can be used to automate a Shelly relay to switch on during the cheapest period of your Agile Octopus tariff.
 
 ## Function
 - Calculates the cheapest period of electricity prices per day.
@@ -13,7 +13,7 @@ An open-source system of scripts that can be used to automate a Shelly relay to 
 |Count|Devices|Source|
 ------|---|------
 1|Raspberry Pi 4b| [ThePiHut](https://thepihut.com/products/raspberry-pi-4-model-b?src=raspberrypi&variant=20064052674622)|
-1|Shelly 1pm| [ShellyStore](https://shellystore.co.uk/product/shelly-1pm-gen3/)|
+1|Shelly 1PM Gen3| [ShellyStore](https://shellystore.co.uk/product/shelly-1pm-gen3/)|
 1|GME12864-43 30pins Display| [ThePiHut](https://thepihut.com/products/0-96-oled-display-module-128x64)|
 
 Count|Power/Connectors|Source|
@@ -33,7 +33,8 @@ Count|Power/Connectors for the Relay Enclosure|Source|
 1|IEC C13 Socket to Type G UK Plug Power Cord|[RS-Electronics](https://uk.rs-online.com/web/p/power-cords/2621126?gb=s)|
 1|UK Switched Electrical Socket|[Amazon](https://www.amazon.co.uk/dp/B01L4P5LVC?ref=ppx_yo2ov_dt_b_fed_asin_title)|
 4|M3 x 8 length Bolts|
-2|M3 Nuts|
+2|M4 Screws|
+2|M4 Nuts|
 
 For an automated smartplug, substituting the Shelly relay for a [Shelly smartplug](https://shellystore.co.uk/product/shelly-plus-plug-uk/) may be more straightforward and cost-effective, but the WiFi capable model appears to have been out of stock for atleast a few months. Due to this, it has not yet been tested whether it could work with the current code provided.
 
@@ -52,7 +53,7 @@ This section describes how to build two subsystems:
 
 ## Control Subsystem Build Guide
 
-The display can be connected to the Raspberry Pi with jumper wires according to the schematic:
+1. The display can be connected to the Raspberry Pi with jumper wires according to the schematic:
 
 |Display|Raspberry Pi Pin|Raspberry Pi Pin Name|
 |-|-|-|
@@ -62,4 +63,63 @@ VCC|1|3V3
 GND|9|GND
 
 ![Controller Circuit](https://github.com/user-attachments/assets/1dc16f84-1673-4b1d-b6df-e4ffe167df4c)
+
+2. The Raspberry Pi can then be mounted to the floor of the enclosure with 4 M3 bolts, and the screen to the side of the enclosure with M3 bolts and nuts:
+
+![image](https://github.com/user-attachments/assets/49a66935-6fbc-4d1d-9047-b8bfea63cb76)
+
+
+## Relay Subsystem Build Guide
+
+*Assuming you are creating a DIY smartplug with the Shelly relay and not wiring it to a pre-existing electrical socket.*
+
+1. The Shelly 1PM gen3 can be wired to the C14 Panel Mount IEC connector according to the schematic provided in its manual:
+
+![Shelly 1PM gen3 Fig 1 Whitebg](https://github.com/user-attachments/assets/76067b43-84bf-42d2-a14c-8e51e325dce8)
+
+|Shelly|IEC Connector|
+------|-----------
+|N|Neutral
+|L|Live
+
+2. An L terminal from the Shelly is then connected to its own SW terminal.
+3. The Shelly's 0 Terminal can then be connected to the electrical socket's live, and the Shelly's remaining N terminal to the socket's neutral.
+4. The ground from the IEC connector can then be connected to the electrical socket's ground.
+5. After the wiring is complete, the Shelly relay can be constrained with a ziptie, and the socket can be screwed into the enclosure.
+
+![Shelly 1PM gen3 Wiring 2 (Custom)](https://github.com/user-attachments/assets/aae3a5ac-0fcc-4e15-8317-bba842cc1b41)
+
+# installation guide
+
+## Initial Raspberry Pi Setup
+
+1. Using [Raspberry Pi Imager](https://www.raspberrypi.com/software/), select your Raspberry Pi model, Raspberry Pi OS (64 bit) and your microSD card, then press next
+   
+![Imager 1](https://github.com/user-attachments/assets/66c077a2-c61e-4ebd-8514-226a35b4692d)
+
+2. On the dialogue that pops up, edit the custom OS settings to allow your Pi to connect to your WiFi
+
+![Imager 2](https://github.com/user-attachments/assets/638a2733-6d52-4e4e-9ef6-1e11743e6b82)
+
+3. Type in a username and password for your Pi, then your WiFi name and password
+  
+![Imager 3](https://github.com/user-attachments/assets/3ed3baec-953b-4fa3-a4a1-2d5e36912d0e)
+
+4. Save and apply the settings, then write to your microSD card
+
+5. Find your Pi's IP address (this can be found in your router connections), then SSH into your Pi. [PuTTy](https://www.putty.org) is an open source software commonly used for this.
+(Type in your Pi's IP address and click open.)
+
+![image](https://github.com/user-attachments/assets/2cacee12-fb02-4873-ac17-772a020593d5)
+
+6. Type in your Pi's username and password
+
+![image](https://github.com/user-attachments/assets/50ad737e-7622-48f6-b773-0e86037af008)
+
+
+## System Installation
+
+*Here you can use an installation script to easily download the scripts, services and requirements used by the system and set them up for you.*
+
+1. Download install.sh <br/>
 
