@@ -169,6 +169,7 @@ sudo raspi-config
 <br/>
 5. Add your Shelly and tariff details to the system's config.ini file
 5a. Navigate to where the system was installed
+
 ```
 cd /home/pi/shelly
 ```
