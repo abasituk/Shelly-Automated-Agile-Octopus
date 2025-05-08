@@ -1,5 +1,3 @@
-Currently WIP and will be completed soon.
-
 # Shelly-Automated-Agile-Octopus
 An open source system of scripts that can be used to automate a Shelly relay to switch on during the cheapest period of your Agile Octopus tariff.
 
