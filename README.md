@@ -153,7 +153,7 @@ sudo raspi-config
 
 ![image](https://github.com/user-attachments/assets/d0306fa2-bd10-4aa8-91ff-fabdbdd94460)
 
-4c. Open 'I2C'
+4c. Select 'I2C'
 
 ![image](https://github.com/user-attachments/assets/233ba3a7-eef2-45eb-bcdd-09ff6982c3b1)
 
