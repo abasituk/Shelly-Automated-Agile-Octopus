@@ -41,6 +41,7 @@ Count|Power/Connectors for the Relay Enclosure|Source|
 6|M3 Nuts|
 2|M4 Screws|
 2|M4 Nuts|
+3|Spade Connectors/quick disconnect connectors unless soldering|
 
 For an automated smartplug, substituting the Shelly relay for a [Shelly smartplug](https://shellystore.co.uk/product/shelly-plus-plug-uk/) may be more straightforward and cost-effective, but the WiFi capable model appears to have been out of stock for atleast a few months. Due to this, it has not yet been tested whether it could work with the current code provided.
 
