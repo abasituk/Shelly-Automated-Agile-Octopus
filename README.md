@@ -97,6 +97,18 @@ GND|9|GND
 ![Relay Wiring Gif 4](https://github.com/user-attachments/assets/ce56dd81-7b71-425b-a129-cec5dee47a9d)
 
 
+<details>
+  <summary>Individual Relay Wiring Images</summary>
+  <img src="https://github.com/user-attachments/assets/e54d1276-c58b-4927-a801-2635ffa3e9bc" alt="image-description"/>
+  <img src="https://github.com/user-attachments/assets/29cf12f8-a353-468a-b2dd-ce19f07cf2cc" alt="image-description"/>
+  <img src="https://github.com/user-attachments/assets/abffacfd-6fce-4db6-b39a-2415d288a5a0" alt="image-description"/>
+  <img src="https://github.com/user-attachments/assets/c59d87ee-dca3-40d6-9a51-95a95ff259a5" alt="image-description"/>
+  <img src="https://github.com/user-attachments/assets/b5427da0-1dbc-4c3c-b86a-868e534408a8" alt="image-description"/>
+  <img src="https://github.com/user-attachments/assets/4a676f61-9362-4749-9d53-0225243fc83d" alt="image-description"/>
+  <img src="https://github.com/user-attachments/assets/7df5679c-3656-4469-86dc-8f61b9b801cf" alt="image-description"/>
+</details>
+
+
 
 # installation guide
 
