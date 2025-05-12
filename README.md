@@ -1,11 +1,10 @@
 # Shelly-Automated-Agile-Octopus
 An open source system of scripts that can be used to automate a Shelly relay to switch on during the cheapest period of your Agile Octopus tariff. The relay will then switch off outside of that period.
 
-Any python capable device with WiFi should be able to run this system. A Raspberry Pi 4B is used for the build tutorial.
-
 
 ![System Diagram (1)](https://github.com/user-attachments/assets/044ee987-41b2-41e3-8bf1-6798a16e9012)
 
+Any python capable device with WiFi should be able to run this system. A Raspberry Pi 4B is used for the build tutorial.
 
 
 
