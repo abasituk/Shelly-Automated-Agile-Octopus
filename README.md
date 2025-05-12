@@ -94,7 +94,8 @@ GND|9|GND
 4. The ground from the IEC connector can then be connected to the electrical socket's ground.
 5. After the wiring is complete, the Shelly relay can be constrained with a ziptie, and the socket can be screwed into the enclosure.
 
-![Relay Wiring Gif 2](https://github.com/user-attachments/assets/a3cbc79d-47a8-4be8-97c9-27454343e9af)
+![Relay Wiring Gif 4](https://github.com/user-attachments/assets/ce56dd81-7b71-425b-a129-cec5dee47a9d)
+
 
 
 # installation guide
