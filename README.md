@@ -35,8 +35,8 @@ If you would like to house the Shelly relay in its own enclosure instead of conn
 Count|Power/Connectors for the Relay Enclosure|Source|
 --|--|-----
 1|C14 Panel Mount IEC Connector Male|[RS-Electronics](https://uk.rs-online.com/web/p/iec-connectors/0488191?gb=s)|
-1|IEC C13 Socket to Type G UK Plug Power Cord|[ThePiHut](https://uk.rs-online.com/web/p/power-cords/2621126?gb=s](https://thepihut.com/products/kettle-type-power-cable-2m-iec-c13-uk)|
-1|UK Switched Electrical Socket (2 poles)|[RS-Electronics](https://www.amazon.co.uk/dp/B01L4P5LVC?ref=ppx_yo2ov_dt_b_fed_asin_title](https://uk.rs-online.com/web/p/plug-sockets/2227904?gb=s)|
+1|IEC C13 Socket to Type G UK Plug Power Cord|[ThePiHut](https://thepihut.com/products/kettle-type-power-cable-2m-iec-c13-uk)|
+1|UK Switched Electrical Socket (2 poles)|[RS-Electronics](https://uk.rs-online.com/web/p/plug-sockets/2227904?gb=s)|
 6|M3 x 8 length Bolts|
 6|M3 Nuts|
 2|M4 Screws|
