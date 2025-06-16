@@ -197,7 +197,7 @@ nano config.ini
 ```
 [Shelly_Variables]                         # Available at https://control.shelly.cloud/
 DEVICE_ID = X                                  # device settings -> Device information
-SERVER_URI = shelly-X-eu.shelly.cloud          # account settings -> Authorization cloud key
+SERVER_URI = shelly-X-eu.shelly.cloud          # account settings -> Authorization cloud key (note: not including https://)
 AUTH_KEY = X                                   # account settings -> Authorization cloud key
 
 [Tariff_Details]                       # Details for your agile octopus tariff (to interact with the API)
