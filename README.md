@@ -28,7 +28,7 @@ The relay subsystem may use a Shelly relay when installed into an existing socke
 | SBC Power | Raspberry Pi 12.5W Power Supply | 1 | £7.50 | ThePiHut |
 | Smart Relay | Shelly 1PM Gen3 | 1 | £18.50 | ThePiHut |
 
-### 1b. Alternative BOM for the IoT-based system, which utilises a portable relay (Configuration 2).
+### 1b. Alternative BOM for the IoT-based system, utilising a smart plug (Configuration 2).
 
 | Identifier | Component | Quantity | Component Cost [GBP] | Source |
 |---|---|---|---|---|
