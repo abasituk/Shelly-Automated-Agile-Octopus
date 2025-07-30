@@ -52,16 +52,16 @@ Count|Power/Connectors|
 If the Shelly Plus plug is be unavailable for purchase, the Shelly relay can be utilised in a customised portable relay subsystem.
 ### 4. Optional components used to build a portable relay subsystem with the Shelly Relay.
 
-Count|Component|Source|
---|--|-----
-1|C14 Panel Mount IEC Connector Male|
-1|IEC C13 Socket to Type G UK Plug Power Cord|
-1|UK Switched Electrical Socket (2 poles)|
-6|M3 x 8 length Bolts|
-6|M3 Nuts|
-2|M4 Screws|
-2|M4 Nuts|
-3|Spade/quick disconnect connectors|
+Count|Component
+--|--
+1|C14 Panel Mount IEC Connector Male
+1|IEC C13 Socket to Type G UK Plug Power Cord
+1|UK Switched Electrical Socket (2 poles)
+6|M3 x 8 length Bolts
+6|M3 Nuts
+2|M4 Screws
+2|M4 Nuts
+3|Spade/quick disconnect connectors
 
 
 
