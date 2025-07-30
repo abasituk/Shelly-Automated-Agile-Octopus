@@ -74,7 +74,6 @@ This section describes how to build two subsystems:
 - The Relay Subsystem:
   - A circuit which utilises a relay to power an appliance as requested by the control subsystem.
 
-*Enclosures are available to be 3D printed for each subsystem*
 
 ## Control Subsystem Build Guide
 
