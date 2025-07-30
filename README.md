@@ -224,9 +224,9 @@ sudo systemctl restart shellycontrol.service webgraph.service
 
 <br/>
 
-After these steps, you should be able to type `http://'Your Pi's IP Address':8080` into a browser on the same WiFi network and see your Pi's webgraph.
+After these steps, type `http://'Your Pi's IP Address':8080` into a browser on the same WiFi network to access the system's webgraph.
 
-You can also check the status of the services to see if there are any errors (press `Ctrl+C` to exit the status):
+You can also check the status of the services to see if there are any errors:
 ```
 systemctl status shellycontrol.service
 ```
